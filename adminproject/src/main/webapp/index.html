@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="portal">
+    <h1 class="portal-title"> CodeRank Portal</h1>
+    <p class="portal-subtitle">
+        Student Management System
+    </p>
+    </div>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="signup" method="post">
+                <h1>Create Account</h1>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="E-mail ID" required>
+                <div class="password-box">
+                <input
+                    type="password"
+                    name="password"
+                    id="signupPassword"
+                     placeholder="Password" required>
+
+                <span
+                    class="toggle-password"
+                    onclick="togglePassword('signupPassword', this)">
+                    <i class="fa-solid fa-eye"></i>
+                </span>
+            </div>
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form action="signin" method="post">
+                <h1>Sign In</h1>
+                <input type="email" name="email" id="email" placeholder="E-mail ID" required>
+                <div class="password-box">
+                <input
+                    type="password"
+                    name="password"
+                    id="signinPassword"
+                    placeholder="Password" required>
+                <span
+                    class="toggle-password"
+                    onclick="togglePassword('signinPassword', this)">
+                    <i class="fa-solid fa-eye"></i>
+                </span>
+                </div>
+          <a href="forgetpassword.jsp" class="forget-link">
+          	forget password?
+          </a>
+                <button type="submit" id="loginBtn">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="panel overlay-left">
+                    <h1>Welcome Back</h1>
+                    <p>
+                        Already have an Acoount?<br>
+                        Login and Continue
+                    </p>
+                    <button type="button" class="ghost" id="signin">Sign In</button>
+                </div>
+                <div class="panel overlay-right">
+                    <h1>Welcome Back</h1>
+                    <p>Enter your Details<br>
+                    and stay Connected</p>
+                    <button type="button" class="ghost" id="signup">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
