@@ -22,6 +22,25 @@ loginBtn.addEventListener("click",()=>{
         alert("please eneter Email and Password");
     }
 });
+const mobileSignup =
+document.getElementById("mobileSignup");
+
+const mobileSignin =
+document.getElementById("mobileSignin");
+
+if(mobileSignup){
+    mobileSignup.addEventListener("click",(e)=>{
+        e.preventDefault();
+        container.classList.add("active");
+    });
+}
+
+if(mobileSignin){
+    mobileSignin.addEventListener("click",(e)=>{
+        e.preventDefault();
+        container.classList.remove("active");
+    });
+}
 function togglePassword(id, icon){
 
     const input = document.getElementById(id);
@@ -29,12 +48,12 @@ function togglePassword(id, icon){
 
     if(input.type === "password"){
         input.type = "text";
-        eye.classList.remove("fa-eye");
-        eye.classList.add("fa-eye-slash");
-    }else{
-        input.type = "password";
         eye.classList.remove("fa-eye-slash");
         eye.classList.add("fa-eye");
+    }else{
+        input.type = "password";
+        eye.classList.remove("fa-eye");
+        eye.classList.add("fa-eye-slash");
     }
 }
 

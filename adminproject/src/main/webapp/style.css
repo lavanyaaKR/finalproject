@@ -16,6 +16,20 @@ body {
     overflow: hidden;
     background: linear-gradient(135deg,#ffe4ec,#edcedf,#ffffff);
 }
+.mobile-switch{
+    margin-top:15px;
+    font-size:14px;
+}
+
+.mobile-switch a{
+    color:palevioletred;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.mobile-switch a:hover{
+    text-decoration:underline;
+}
 .forget-link{
 	font-size:13px;
     font-weight:500;
@@ -186,4 +200,70 @@ button {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+
+    body{
+        display:block;
+        padding:20px;
+        overflow-y:auto;
+    }
+
+    .portal{
+        margin:0 0 20px 0;
+        text-align:center;
+    }
+
+    .portal-title{
+        font-size:32px;
+    }
+
+    .portal-subtitle{
+        font-size:18px;
+    }
+
+    .container{
+        width:100%;
+        max-width:450px;
+        margin:auto;
+        min-height:auto;
+    }
+
+    .overlay-container{
+        display:none;
+    }
+
+    .sign-in,
+    .sign-up{
+        position:relative;
+        width:100%;
+        transform:none !important;
+        opacity:1;
+        visibility:visible;
+    }
+
+    .sign-up{
+        display:none;
+    }
+
+    .container.active .sign-in{
+        display:none;
+    }
+
+    .container.active .sign-up{
+        display:block;
+    }
+
+    form{
+        padding:30px 20px;
+    }
+
+    input{
+        font-size:16px;
+    }
+
+    button{
+        width:100%;
+    }
 }

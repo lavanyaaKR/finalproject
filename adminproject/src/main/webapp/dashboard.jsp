@@ -19,7 +19,7 @@ if(session.getAttribute("name") == null){
 
 	<div class="sidebar">
 
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    <img src="images/profile.jpg"
      alt="Profile"
      class="profile-pic">
 
